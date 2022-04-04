@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import timedelta
 import pickle
-#from tensorflow import keras
+from tensorflow import keras
 from streamlit_folium import folium_static
 import folium
 import streamlit as st
@@ -14,7 +14,7 @@ from gsheetsdb import connect
 Project_Path='/Users/nickkarras/PycharmProjects/'
 #model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
 
-
+#
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
     if Covid == 'Yes':
