@@ -7,7 +7,7 @@ from datetime import timedelta
 #import folium
 import streamlit as st
 import datetime
-from gsheetsdb import connect
+#from gsheetsdb import connect
 
 
 
