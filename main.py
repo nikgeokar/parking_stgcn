@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
 from datetime import timedelta
-import pickle
-from tensorflow import keras
-from streamlit_folium import folium_static
-import folium
+#import pickle
+#from tensorflow import keras
+#from streamlit_folium import folium_static
+#import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
