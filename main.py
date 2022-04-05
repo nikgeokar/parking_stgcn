@@ -12,13 +12,14 @@ from io import BytesIO
 import pickle
 import requests
 from pathlib import Path
-pkl_path = Path(__file__).parents[1] / 'parkingviolationpredictionapp/Length_Test.txt'
+pkl_path = Path(__file__).parents[1] / 'parkingviolationpredictionapp/Standar_Scaller.pkl'
 
-with open(pkl_path, "r") as file:
-    Length_Train = eval(file.readline())
-# xgb_pickle = open(pkl_path, 'rb')
-# Standar_Scaller = pickle.load(xgb_pickle)
-# xgb_pickle.close()
+# with open(pkl_path, "r") as file:
+#     Length_Train = eval(file.readline())
+
+xgb_pickle = open(pkl_path, 'rb')
+Standar_Scaller = pickle.load(xgb_pickle)
+xgb_pickle.close()
 
 #mLink = 'https://github.com/nikgeokar/ParkingViolationPredictionApp/blob/6a1691fe746b8beb4df98ce940e11da02cedabba/Standar_Scaller.pkl?raw=true'
 #mfile = BytesIO(requests.get(mLink).content)
