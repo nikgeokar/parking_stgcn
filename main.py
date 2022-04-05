@@ -8,6 +8,7 @@ import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
+path = 'https://github.com/nikgeokar/Parking_Violation_Prediction/blob/master'
 
 
 
@@ -148,9 +149,9 @@ def Get_Final_Dataset(Data_Frame,Distance_Data):
 def Scaller(Data_Frame):
     import pickle
 
-    with open("Standar_Scaller.pkl", 'rb') as f:
-        Standar_Scaller = pickle.load(f)
-    #Standar_Scaller = pickle.load(open('Standar_Scaller.pkl', 'rb'))
+    # with open("Standar_Scaller.pkl", 'rb') as f:
+    #     Standar_Scaller = pickle.load(f)
+    Standar_Scaller = pickle.load(open('https://github.com/nikgeokar/Parking_Violation_Prediction/blob/c43692cb2d2f28345ab9759dcd29757792dcf9b5/Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
 
