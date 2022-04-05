@@ -12,7 +12,7 @@ from io import BytesIO
 import pickle
 import requests
 from pathlib import Path
-pkl_path = Path(__file__).parents[1] / 'parkingviolationpredictionapp/Standar_Scaller.pkl'
+pkl_path = Path(__file__).parents[1] / 'ParkingViolationPrediction/Standar_Scaller.pkl'
 
 # with open(pkl_path, "r") as file:
 #     Length_Train = eval(file.readline())
