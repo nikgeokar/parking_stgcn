@@ -11,10 +11,15 @@ from gsheetsdb import connect
 from io import BytesIO
 import pickle
 import requests
+from pathlib import Path
+pkl_path = Path(__file__).parents[1] / 'Standar_Scaller.pkl'
+xgb_pickle = open(pkl_path, 'rb')
+Standar_Scaller = pickle.load(xgb_pickle)
+xgb_pickle.close()
 
-mLink = 'https://github.com/nikgeokar/ParkingViolationPredictionApp/blob/6a1691fe746b8beb4df98ce940e11da02cedabba/Standar_Scaller.pkl?raw=true'
-mfile = BytesIO(requests.get(mLink).content)
-Standar_Scaller = pickle.load(mfile)
+#mLink = 'https://github.com/nikgeokar/ParkingViolationPredictionApp/blob/6a1691fe746b8beb4df98ce940e11da02cedabba/Standar_Scaller.pkl?raw=true'
+#mfile = BytesIO(requests.get(mLink).content)
+#Standar_Scaller = pickle.load(mfile)
 
 
 
