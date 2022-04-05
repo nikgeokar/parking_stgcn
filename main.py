@@ -12,7 +12,7 @@ from gsheetsdb import connect
 
 
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
+#model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
 
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
