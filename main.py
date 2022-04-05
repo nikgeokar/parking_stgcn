@@ -12,7 +12,7 @@ from io import BytesIO
 import pickle
 import requests
 from pathlib import Path
-pkl_path = Path(__file__).parents[1] / 'Length_Test.txt'
+pkl_path = Path(__file__).parents[1] / 'parkingviolationpredictionapp/Length_Test.txt'
 
 with open(pkl_path, "r") as file:
     Length_Train = eval(file.readline())
