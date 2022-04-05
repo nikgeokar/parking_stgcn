@@ -12,7 +12,7 @@ from io import BytesIO
 import pickle
 import requests
 from pathlib import Path
-pkl_path = Path(__file__).parents[1] / 'Standar_Scaller.pkl'
+pkl_path = Path(__file__).parents[1] / 'parkingviolationpredictionapp/Standar_Scaller.pkl'
 xgb_pickle = open(pkl_path, 'rb')
 Standar_Scaller = pickle.load(xgb_pickle)
 xgb_pickle.close()
