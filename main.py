@@ -148,9 +148,9 @@ def Get_Final_Dataset(Data_Frame,Distance_Data):
 def Scaller(Data_Frame):
     import pickle
 
-
-
-    Standar_Scaller = pickle.load(open(Project_Path+'ParkingViolationPrediction/Standar_Scaller.pkl', 'rb'))
+    with open("Standar_Scaller.pkl", 'rb') as f:
+        Standar_Scaller = pickle.load(f)
+    #Standar_Scaller = pickle.load(open('Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
 
