@@ -8,14 +8,14 @@ import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
-from pathlib import Path
-path = 'https://github.com/nikgeokar/Parking_Violation_Prediction/blob/master'
+
 
 
 
 Project_Path='/Users/nickkarras/PycharmProjects/'
-#model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
-
+model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
+with open('Standar_Scaller.pkl', 'rb') as f:
+    Standar_Scaller = pickle.load(f)
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
@@ -147,9 +147,8 @@ def Get_Final_Dataset(Data_Frame,Distance_Data):
     Data_Frame=Data_Frame[Names]
     return Data_Frame
 
-def Scaller(Data_Frame):
+def Scaller(Data_Frame,Standar_Scaller):
     import pickle
-    Standar_Scaller = pickle.load(open('Standar_Scaller.pkl', 'rb'))
         #Standar_Scaller = pickle.load(open(constants.path+'Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
@@ -254,7 +253,7 @@ if st.button('Πρόβλεψη ποσοστό παραβατικότητας α�
     Slots,Distance_Data=GetSlotDistance_Capacity()
     Data_Frame=Get_Final_Dataset(Data_Frame,Distance_Data)
     #Data_Frame.to_csv(Project_Path+ '/ParkingViolationPrediction/Data/456.csv')
-    Data_Frame=Scaller(Data_Frame)
+    Data_Frame=Scaller(Data_Frame,Standar_Scaller)
     Predictions=Get_Predictions(Data_Frame)
     Parking_Slots=Get_Slots_Info(Predictions,Slots)
     Map_Parking_Slots=Creat_Map(Parking_Slots)
