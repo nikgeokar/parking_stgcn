@@ -8,7 +8,7 @@ import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
-from io import BytesIO
+
 import pickle
 import requests
 from pathlib import Path
