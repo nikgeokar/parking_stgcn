@@ -149,12 +149,7 @@ def Get_Final_Dataset(Data_Frame,Distance_Data):
 
 def Scaller(Data_Frame):
     import pickle
-
-    # with open("Standar_Scaller.pkl", 'rb') as f:
-    #     Standar_Scaller = pickle.load(f)
-    file = 'Standar_Scaller.pkl'
-    fnoFile = Path(file).parents[1] / 'Standar_Scaller.pkl'  # replace the file name in quotes.
-    Standar_Scaller = pd.read_pickle(fnoFile)
+    Standar_Scaller = pickle.load(open('Standar_Scaller.pkl', 'rb'))
         #Standar_Scaller = pickle.load(open(constants.path+'Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
