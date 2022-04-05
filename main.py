@@ -1,21 +1,26 @@
 import pandas as pd
 import numpy as np
 from datetime import timedelta
-import pickle
+
 from tensorflow import keras
 from streamlit_folium import folium_static
 import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
+from io import BytesIO
+import pickle
+import requests
 
+mLink = 'https://github.com/nikgeokar/ParkingViolationPredictionApp/blob/6a1691fe746b8beb4df98ce940e11da02cedabba/Standar_Scaller.pkl?raw=true'
+mfile = BytesIO(requests.get(mLink).content)
+Standar_Scaller = pickle.load(mfile)
 
 
 
 Project_Path='/Users/nickkarras/PycharmProjects/'
-model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
-with open('Standar_Scaller.pkl', 'rb') as f:
-    Standar_Scaller = pickle.load(f)
+#model =  keras.models.load_model('/Users/nickkarras/PycharmProjects/ParkingViolationPrediction/DNN_Regressor')
+
 #
 def Get_Inputs(Date,Time,Covid,Holidays,temp,humidity):
     Year, Month, Day = Date.year, Date.month, Date.day
