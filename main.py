@@ -152,7 +152,8 @@ def Scaller(Data_Frame):
     # with open("Standar_Scaller.pkl", 'rb') as f:
     #     Standar_Scaller = pickle.load(f)
     with open('Parking_Violation_Prediction/Standar_Scaller.pkl', 'rb') as handle:
-        Standar_Scaller = handle.read()
+        Data = handle.read()
+    Standar_Scaller = pickle.loads(Data)
         #Standar_Scaller = pickle.load(open(constants.path+'Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
