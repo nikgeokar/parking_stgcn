@@ -1,0 +1,4 @@
+tensorflow
+streamlit-folium
+folium
+gsheetsdb
