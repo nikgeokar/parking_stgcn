@@ -8,6 +8,7 @@ import folium
 import streamlit as st
 import datetime
 from gsheetsdb import connect
+from pathlib import Path
 path = 'https://github.com/nikgeokar/Parking_Violation_Prediction/blob/master'
 
 
@@ -151,9 +152,9 @@ def Scaller(Data_Frame):
 
     # with open("Standar_Scaller.pkl", 'rb') as f:
     #     Standar_Scaller = pickle.load(f)
-    with open('Parking_Violation_Prediction/Standar_Scaller.pkl', 'rb') as handle:
-        Data = handle.read()
-    Standar_Scaller = pickle.loads(Data)
+    file = 'Standar_Scaller.pkl'
+    fnoFile = Path(file).parents[1] / 'Standar_Scaller.pkl'  # replace the file name in quotes.
+    Standar_Scaller = pd.read_pickle(fnoFile)
         #Standar_Scaller = pickle.load(open(constants.path+'Standar_Scaller.pkl', 'rb'))
     Data_Frame = Standar_Scaller.transform(Data_Frame)
     return Data_Frame
