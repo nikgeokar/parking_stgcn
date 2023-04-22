@@ -13,14 +13,16 @@ To overcome the aforementioned challenges we propose:
 
 2. A temporal graph convolutional model design that can cope with miss- ing values that are typically present during inference.
 
-[Final6_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301993/Final6_N.pdf)
+![Final6_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301993/Final6_N.pdf)
 
 3. A novel semi-supervised temporal and spatial data augmentation and smoothing technique that can cope with the small number of annotations and/or missing data present in the training dataset.
 
-[Figure5_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301997/Figure5_N.pdf)
+![Figure5_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301997/Figure5_N.pdf)
 
 
-
+<div align="center">
+  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301997/Figure5_N.pdf" alt="Figure5_N.pdf" width="500"/>
+</div>
 
 
 Please note that, due to GDPR regulations, the dataset containing historical checks of the municipal police is not publicly available. Therefore, we have included a demo file named "Scan_Data_Reg_2.3.csv" that contains 100 randomly generated records.
