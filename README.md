@@ -5,7 +5,7 @@ Controlled parking systems in cities provide designated parking zones and allow 
 The main contribution of this work is a semi-supervised deep learning approach that employs graph neural networks capable of capturing both the spatial and temporal dynamics of parking systems and driver’s behaviors, im- proving the accuracy of parking violation prediction compared to the existing state-of-the-art approaches.To give you a better understanding of our project, the pipeline of our model is illustrated in the figure below:
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png" alt="1" style="max-width: 400px;"/>
+  <img src="https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png" alt="1" style="max-width: 200px;"/>
 </div>
 
 To overcome the aforementioned challenges we propose:
