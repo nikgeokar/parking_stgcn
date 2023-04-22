@@ -9,7 +9,7 @@ To give you a better understanding of our project, the pipeline of our model is 
 To overcome the aforementioned challenges we propose:
 1. An efficient pipeline for constructing temporal graph-based datasets for controlled on-street parking systems.
 
-[Figure15_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301989/Figure15_N.pdf)
+![Figure15_N.pdf](https://github.com/nikgeokar/parking_stgcn/files/11301989/Figure15_N.pdf)
 
 2. A temporal graph convolutional model design that can cope with miss- ing values that are typically present during inference.
 
