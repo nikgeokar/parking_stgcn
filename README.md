@@ -5,6 +5,9 @@ Controlled parking systems in cities provide designated parking zones and allow 
 To give you a better understanding of our project, the pipeline of our model is illustrated in the figure below.
 ![2](https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png)
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png" alt="2" width="300"/>
+</div>
 
 To overcome the aforementioned challenges we propose:
 1. An efficient pipeline for constructing temporal graph-based datasets for controlled on-street parking systems.
