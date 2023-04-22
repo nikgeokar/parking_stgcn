@@ -5,7 +5,7 @@ Controlled parking systems in cities provide designated parking zones and allow 
 The main contribution of this work is a semi-supervised deep learning approach that employs graph neural networks capable of capturing both the spatial and temporal dynamics of parking systems and driver’s behaviors, im- proving the accuracy of parking violation prediction compared to the existing state-of-the-art approaches.To give you a better understanding of our project, the pipeline of our model is illustrated in the figure below:
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png" alt="1" width="400"/>
+  <img src="https://user-images.githubusercontent.com/44779987/190924742-13ba3d19-7b18-4e37-9ca3-e35d68de6377.png" alt="1" width="450"/>
 </div>
 
 To overcome the aforementioned challenges we propose:
@@ -13,19 +13,19 @@ To overcome the aforementioned challenges we propose:
 1. An efficient pipeline for constructing temporal graph-based datasets for controlled on-street parking systems.
 
 <div align="center">
-  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301989/Figure15_N.pdf" alt="2" width="400"/>
+  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301989/Figure15_N.pdf" alt="2" width="350"/>
 </div>
 
 2. A temporal graph convolutional model design that can cope with miss- ing values that are typically present during inference.
 
 <div align="center">
-  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301993/Final6_N.pdf" alt="3" width="400"/>
+  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301993/Final6_N.pdf" alt="3" width="350"/>
 </div>
 
 3. A novel semi-supervised temporal and spatial data augmentation and smoothing technique that can cope with the small number of annotations and/or missing data present in the training dataset.
 
 <div align="center">
-  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301997/Figure5_N.pdf" alt="4" width="400"/>
+  <img src="https://github.com/nikgeokar/parking_stgcn/files/11301997/Figure5_N.pdf" alt="4" width="350"/>
 </div>
 
 
